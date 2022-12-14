@@ -23,12 +23,11 @@ export const Footer = () => {
                         Freepik - Flaticon
                     </Link>
                 </Text>
-                <Link href={"http://github.com/MaksymPetyak"}
+                <Link href={"https://github.com/MaksymPetyak/are-we-agi-yet"}
                       _hover={{color: 'teal.500'}} isExternal>
                     <FontAwesomeIcon
                         size={"2xl"}
                         icon={faGithub}
-                        href={"http://github.com/MaksymPetyak"}
                     />
                 </Link>
             </VStack>
