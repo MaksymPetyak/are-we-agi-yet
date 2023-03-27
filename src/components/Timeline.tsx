@@ -6,6 +6,15 @@ import {faExternalLink} from "@fortawesome/free-solid-svg-icons";
 
 const TIMELINE_EVENTS = [
     {
+        title: "March 2023",
+        cardTitle: "GPT-4",
+        url: "https://openai.com/research/gpt-4/",
+        cardSubtitle: "GPT-4 could pass the Uniform Bar Exam, LSAT, AP Biology and more tests in higher than the 90th percentile." +
+            "It can also accept visual input and comment on what's happening in an image." +
+            "A paper* by researchers from Microsoft Research concluded: \"GPT-4's performance is strikingly close to human-level performance, and often vastly surpasses prior models such as ChatGPT. Given the breadth and depth of GPT-4's capabilities, we believe that it could reasonably be viewed as an early (yet still incomplete) version of an artificial general intelligence (AGI) system.\"",
+        cardDetailedText: ``
+    },
+    {
         title: "November 2022",
         cardTitle: "ChatGPT",
         url: "https://chat.openai.com/",
@@ -70,6 +79,9 @@ export const Timeline = () => {
                 activeItemIndex={-1}
                 hideControls
             >
+                <Link href={"https://arxiv.org/abs/2303.12712"} fontSize={"sm"} color={"teal.500"} isExternal>
+                    *Sparks of Artificial General Intelligence: Early experiments with GPT-4
+                </Link>
                 <Link
                     href={"https://chat.openai.com/"}
                     style={{textDecoration: 'none'}}
