@@ -1,5 +1,5 @@
 import {Chrono} from "react-chrono";
-import {VStack, Text, Button, Link} from "@chakra-ui/react";
+import {VStack, Text, Button, Link, useMediaQuery} from "@chakra-ui/react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faExternalLink} from "@fortawesome/free-solid-svg-icons";
 
@@ -69,15 +69,23 @@ const TIMELINE_EVENTS = [
 ]
 
 export const Timeline = () => {
+    const [isWidthLargerThanMd] = useMediaQuery("(min-width: 768px)");
+
+    const EVENTS = !isWidthLargerThanMd ?
+        TIMELINE_EVENTS.map((event) => {
+            return { ...event, title: "", cardTitle: event.cardTitle + `, ${event.title}` }
+        }) : TIMELINE_EVENTS
 
     return (
-        <VStack>
+        <VStack style={{ width: "100%"}}>
             <Text>It's coming...</Text>
             <Chrono
-                items={TIMELINE_EVENTS}
-                mode="VERTICAL_ALTERNATING"
+                items={EVENTS}
+                mode={isWidthLargerThanMd ? "VERTICAL_ALTERNATING" : "VERTICAL"}
+                cardPositionHorizontal={"TOP"}
                 activeItemIndex={-1}
                 hideControls
+                allowDynamicUpdate
             >
                 <Link href={"https://arxiv.org/abs/2303.12712"} fontSize={"sm"} color={"teal.500"} isExternal>
                     *Sparks of Artificial General Intelligence: Early experiments with GPT-4
