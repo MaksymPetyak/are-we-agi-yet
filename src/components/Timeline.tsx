@@ -1,70 +1,65 @@
-import {Chrono} from "react-chrono";
-import {VStack, Text, Button, Link, useMediaQuery} from "@chakra-ui/react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faExternalLink} from "@fortawesome/free-solid-svg-icons";
-
+import { Chrono } from "react-chrono";
+import { VStack, Text, useMediaQuery } from "@chakra-ui/react";
 
 const TIMELINE_EVENTS = [
     {
-        title: "March 2023",
-        cardTitle: "GPT-4",
-        url: "https://openai.com/research/gpt-4/",
-        cardSubtitle: "GPT-4 could pass the Uniform Bar Exam, LSAT, AP Biology and more tests in higher than the 90th percentile. " +
-            "It can also accept visual input and comment on what's happening in an image. " +
-            "A paper* by researchers from Microsoft Research concluded: \"GPT-4's performance is strikingly close to human-level performance, and often vastly surpasses prior models such as ChatGPT. Given the breadth and depth of GPT-4's capabilities, we believe that it could reasonably be viewed as an early (yet still incomplete) version of an artificial general intelligence (AGI) system.\"",
+        title: "December 2024",
+        cardTitle: "o3",
+        url: "https://arcprize.org/blog/oai-o3-pub-breakthrough",
+        cardSubtitle: "OpenAI's o3 model scored 75.7% on the ARC-AGI-1 test, reaching 87.5% with additional computing power. While it still has limitations with basic tasks, it represents significant progress in AI capabilities.",
+        cardDetailedText: ``
+    },
+    {
+        title: "September 2024",
+        cardTitle: "o1",
+        url: "https://openai.com/o1/",
+        cardSubtitle: "OpenAI's o1 model introduces a significant shift in compute allocation, focusing on inference rather than pretraining. This approach enhances complex reasoning abilities but increases response time and costs. o1 utilizes chain-of-thought (CoT) processing, generating additional tokens for step-by-step reasoning.", 
+        cardDetailedText: ``
+    },
+    {
+        title: "May 2024",
+        cardTitle: "GPT-4o",
+        url: "https://openai.com/index/hello-gpt-4o/",
+        cardSubtitle: "GPT-4o is a multimodal AI model that processes and generates text, audio, and images in real-time. It features improved multilingual understanding and visual analysis capabilities.",
         cardDetailedText: ``
     },
     {
         title: "November 2022",
         cardTitle: "ChatGPT",
         url: "https://chat.openai.com/",
-        cardSubtitle: "ChatGPT is a large-scale language model optimised for" +
-            " conversations. It was fine-tuned by asking human trainers to rank the" +
-            " generated responses from the model. ChatGPT went completely viral;  to" +
-            " see how good it is, just try it out yourself:",
+        cardSubtitle: "ChatGPT is a language model optimized for dialogue, trained using human feedback to improve response quality and helpfulness.",
         cardDetailedText: ``
     },
     {
         title: "January 2021",
         cardTitle: "DALL·E",
         url: "https://labs.openai.com/",
-        cardSubtitle: "DALL·E model generates images from text. It can generate" +
-            " and shows understanding of many concepts, objects, movies, famous" +
-            " people, and styles.",
+        cardSubtitle: "DALL·E generates images from text descriptions, capable of rendering various subjects including objects, scenes, people, and artistic styles.",
         cardDetailedText: ``
     },
     {
         title: "June 2020",
         cardTitle: "GPT-3",
-        cardSubtitle: "GPT-3 is a large (175 billion parameters) language model trained" +
-            " on hundrends of million of words to predict the next token. It showed" +
-            " ability to generate code, write articles that would be" +
-            " indistinguishable from human output, summarise text, and many others.",
+        cardSubtitle: "GPT-3, with 175 billion parameters, demonstrated strong capabilities in text generation, coding, and article writing. It established new benchmarks for large language models.",
         cardDetailedText: ``
     },
     {
         title: "June 2017",
         cardTitle: "Transformers",
         url: "https://arxiv.org/abs/1706.03762/",
-        cardSubtitle: "Transformer architecture was introduced in the \"Attention Is" +
-            " All You Paper Need\" paper. Transformer architecture has been key in" +
-            " allowing to scale and efficiently train neural networks.",
+        cardSubtitle: "The Transformer architecture, introduced in the 'Attention Is All You Need' paper, enabled more efficient training of large-scale AI models.",
     },
     {
         title: "March 2016",
         cardTitle: "AlphaGo",
         url: "https://www.deepmind.com/research/highlighted-research/alphago",
-        cardSubtitle: "AlphaGo beat Go world champion Lee Sedol. Subsequently, AlphaZero learned to play chess, shogi, and Go," +
-            " only through self-play and beat the best computer programs in each" +
-            " game.\n",
+        cardSubtitle: "AlphaGo defeated Go champion Lee Sedol. Its successor AlphaZero learned chess, shogi, and Go through self-play, surpassing existing computer programs.",
     },
     {
         title: "September 2012",
         cardTitle: "AlexNet",
         url: "https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
-        cardSubtitle: "AlexNet is a convolutional neural network that set" +
-            " state-of-the-art performance on ImageNet sparking the deep learning" +
-            " revolution.\n",
+        cardSubtitle: "AlexNet demonstrated significant improvements in computer vision accuracy, leading to widespread adoption of deep learning in image recognition tasks.",
     },
 ]
 
@@ -77,7 +72,7 @@ export const Timeline = () => {
         }) : TIMELINE_EVENTS
 
     return (
-        <VStack style={{ width: "100%"}}>
+        <VStack style={{ width: "100%" }}>
             <Text>It's coming...</Text>
             <Chrono
                 items={EVENTS}
@@ -86,31 +81,36 @@ export const Timeline = () => {
                 activeItemIndex={-1}
                 hideControls
                 allowDynamicUpdate
-            >
-                <Link href={"https://arxiv.org/abs/2303.12712"} fontSize={"sm"} color={"teal.500"} isExternal>
-                    *Sparks of Artificial General Intelligence: Early experiments with GPT-4
-                </Link>
-                <Link
-                    href={"https://chat.openai.com/"}
-                    style={{textDecoration: 'none'}}
-                    isExternal
-                >
-                    <Button colorScheme='teal' size='sm'>
-                        Try it &nbsp;
-                        <FontAwesomeIcon size={"sm"} icon={faExternalLink}/>
-                    </Button>
-                </Link>
-                <Link
-                    href={"https://labs.openai.com/"}
-                    style={{textDecoration: 'none'}}
-                    isExternal
-                >
-                    <Button colorScheme='teal' size='sm'>
-                        Try it &nbsp;
-                        <FontAwesomeIcon size={"sm"} icon={faExternalLink}/>
-                    </Button>
-                </Link>
-            </Chrono>
+                theme={{
+                    titleColor: "#3182CE",
+                    primary: "#3182CE"
+                }}
+                classNames={{
+                    card: "timeline-card",
+                    cardTitle: "timeline-card-title",
+                    cardSubTitle: "timeline-card-subtitle"
+                }}
+            />
+            <style>{`
+                .timeline-card-title {
+                    color: #3182CE !important;
+                }
+                .timeline-card-subtitle {
+                    color: #000000 !important;
+                }
+                .timeline-card:active,
+                .timeline-card:focus {
+                    background: none !important;
+                    box-shadow: none !important;
+                    transform: none !important;
+                }
+                .timeline-title:active,
+                .timeline-title:focus,
+                .timeline-title:hover {
+                    background: none !important;
+                    color: #3182CE !important;
+                }
+            `}</style>
         </VStack>
     )
 }

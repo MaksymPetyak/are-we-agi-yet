@@ -18,9 +18,9 @@ export const App = () => (
             <VStack minH="100vh">
                 <VStack spacing={4}>
                     <VStack textAlign={"center"}>
-                        <Text fontSize={"4xl"} as={"b"}>Are we AGI yet?</Text>
-                        <Text fontSize={"5xl"} as={"b"}>Nope</Text>
-                        <Text fontSize={"2xl"}>...but AI is getting scary good.</Text>
+                        <Text fontSize={"2xl"} as={"b"}>Are we AGI yet?</Text>
+                        <Text fontSize={"3xl"} as={"b"}>Nope</Text>
+                        <Text fontSize={"xl"}>...but AI is getting scary good.</Text>
                     </VStack>
                     <VStack spacing={4} p={4}>
                         <HStack spacing={4} backgroundColor={"gray.100"}
