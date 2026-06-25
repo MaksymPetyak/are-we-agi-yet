@@ -5,7 +5,6 @@ import Layout from './components/Layout'
 import Home from './pages/Home'
 import Benchmarks from './pages/Benchmarks'
 import Definitions from './pages/Definitions'
-import Opinions from './pages/Opinions'
 
 function App() {
   const [booted, setBooted] = useState(() => {
@@ -37,7 +36,6 @@ function App() {
         <Route index element={<Home />} />
         <Route path="benchmarks" element={<Benchmarks />} />
         <Route path="definitions" element={<Definitions />} />
-        <Route path="opinions" element={<Opinions />} />
         <Route path="*" element={<Home />} />
       </Route>
     </Routes>

@@ -5,7 +5,6 @@ const links = [
   { to: '/', label: 'Home', end: true },
   { to: '/benchmarks', label: 'Benchmarks', end: false },
   { to: '/definitions', label: 'Definitions', end: false },
-  { to: '/opinions', label: 'Opinions', end: false },
 ]
 
 export default function Nav() {
