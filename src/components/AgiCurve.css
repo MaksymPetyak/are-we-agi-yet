@@ -1,0 +1,87 @@
+.curve {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(700px 320px at 50% -10%, rgba(68, 89, 122, 0.08), transparent 60%),
+    linear-gradient(180deg, var(--surface-2), var(--surface));
+  box-shadow: var(--shadow);
+  padding: 10px 10px 0;
+}
+
+.curve svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.curve__axis {
+  stroke: rgba(28, 32, 38, 0.18);
+  stroke-width: 1.5;
+}
+
+.curve__axlbl {
+  font: 600 12px ui-sans-serif, system-ui, Arial;
+  fill: var(--muted);
+}
+
+.curve__line {
+  stroke: var(--accent);
+  stroke-width: 3;
+}
+
+.curve__ghost circle {
+  fill: #9aa2ae;
+}
+
+.curve__ghost text {
+  font: 600 11px ui-sans-serif, system-ui, Arial;
+  fill: #9aa2ae;
+}
+
+.curve__drop {
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 3;
+}
+
+.curve__here {
+  fill: var(--accent);
+  stroke: var(--surface-2);
+  stroke-width: 2;
+}
+
+.curve__herelbl {
+  font: 700 14px ui-sans-serif, system-ui, Arial;
+  fill: var(--display);
+}
+
+.curve__pole {
+  stroke: var(--no);
+  stroke-width: 3;
+}
+
+.curve__flag {
+  fill: var(--no);
+}
+
+.curve__agi {
+  font: 700 14px ui-sans-serif, system-ui, Arial;
+  fill: var(--no);
+}
+
+.curve__wheel {
+  fill: var(--muted);
+}
+
+.curve__fine {
+  font: 600 11px ui-sans-serif, system-ui, Arial;
+  fill: var(--faint);
+}
+
+.curve__cap {
+  padding: 12px 12px 14px;
+  font-size: 12.5px;
+  color: var(--faint);
+  text-align: center;
+}

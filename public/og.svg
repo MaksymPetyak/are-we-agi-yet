@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="0%" r="90%">
+      <stop offset="0%" stop-color="#1a1709" />
+      <stop offset="55%" stop-color="#0a0a0b" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <text x="80" y="190" font-family="system-ui, Arial, sans-serif" font-size="40" font-weight="600" fill="#8e8e98">The AGI scoreboard</text>
+  <text x="80" y="270" font-family="system-ui, Arial, sans-serif" font-size="64" font-weight="700" fill="#ededf0">Are we AGI yet?</text>
+  <text x="76" y="470" font-family="system-ui, Arial, sans-serif" font-size="190" font-weight="800" fill="#ff5d5d">No.</text>
+  <text x="84" y="545" font-family="system-ui, Arial, sans-serif" font-size="30" fill="#8e8e98">A live scoreboard of frontier AI vs. the benchmarks that matter.</text>
+  <!-- mini bars, bottom-right -->
+  <g transform="translate(820, 360)">
+    <rect x="0" y="0" width="300" height="10" rx="5" fill="#26262b" />
+    <rect x="0" y="0" width="48" height="10" rx="5" fill="#f5c518" />
+    <rect x="0" y="34" width="300" height="10" rx="5" fill="#26262b" />
+    <rect x="0" y="34" width="138" height="10" rx="5" fill="#f5c518" />
+    <rect x="0" y="68" width="300" height="10" rx="5" fill="#26262b" />
+    <rect x="0" y="68" width="216" height="10" rx="5" fill="#f5c518" />
+    <rect x="0" y="102" width="300" height="10" rx="5" fill="#26262b" />
+    <rect x="0" y="102" width="267" height="10" rx="5" fill="#f5c518" />
+  </g>
+</svg>

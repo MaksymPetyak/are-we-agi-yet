@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AGI curve — hero mockups</title>
+    <style>
+      :root {
+        --bg: #0a0a0b;
+        --panel: rgba(255, 255, 255, 0.025);
+        --border: rgba(255, 255, 255, 0.08);
+        --text: #ededf0;
+        --muted: #8e8e98;
+        --accent: #f5c518;
+        --no: #ff5d5d;
+        color-scheme: dark;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        padding: 40px 20px 80px;
+      }
+      .wrap { max-width: 900px; margin: 0 auto; }
+      h1 { text-align: center; font-size: 22px; font-weight: 700; margin: 0 0 4px; }
+      .lede { text-align: center; color: var(--muted); margin: 0 0 36px; font-size: 14px; }
+      .concept {
+        border: 1px solid var(--border);
+        background: var(--panel);
+        border-radius: 18px;
+        padding: 22px 22px 18px;
+        margin-bottom: 26px;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .concept h2 { font-size: 18px; margin: 0 0 2px; font-weight: 700; }
+      .punch { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
+      .frame {
+        background: radial-gradient(700px 320px at 50% -10%, rgba(245, 197, 24, 0.07), transparent 60%), #0c0c0e;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 8px;
+      }
+      svg { display: block; width: 100%; height: auto; }
+      .lbl { font: 600 14px ui-sans-serif, system-ui, Arial; fill: var(--text); }
+      .lbl-sm { font: 600 12px ui-sans-serif, system-ui, Arial; fill: var(--muted); }
+      .lbl-ghost { font: 600 11px ui-sans-serif, system-ui, Arial; fill: #5a5a63; }
+      .axis { stroke: rgba(255, 255, 255, 0.14); stroke-width: 1.5; }
+      .emoji { font-size: 26px; }
+      .caption-note { color: var(--muted); font-size: 13px; margin: 14px 2px 0; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>"You are here → AGI" — hero concepts</h1>
+      <p class="lede">Three takes on the famous curve, tuned for an "are we AGI yet? → No" site.</p>
+
+      <!-- CONCEPT A -->
+      <section class="concept">
+        <span class="tag">Concept A</span>
+        <h2>The Goalposts</h2>
+        <p class="punch">The "AGI" sign keeps rolling away. Every past "almost there" is still bunched down in the flats.</p>
+        <div class="frame">
+          <svg viewBox="0 0 820 380" role="img" aria-label="Goalposts curve">
+            <line class="axis" x1="55" y1="345" x2="790" y2="345" />
+            <line class="axis" x1="55" y1="345" x2="55" y2="35" />
+            <text class="lbl-sm" x="60" y="28">capability</text>
+            <text class="lbl-sm" x="700" y="368">time →</text>
+
+            <!-- the curve -->
+            <path d="M60,332 C 360,330 560,306 770,70" fill="none" stroke="#f5c518" stroke-width="3" />
+
+            <!-- ghost 'you were here' markers, bunched in the flats -->
+            <g>
+              <circle cx="205" cy="331" r="4" fill="#5a5a63" />
+              <text class="lbl-ghost" x="180" y="320">you were here '22</text>
+              <circle cx="330" cy="326" r="4" fill="#5a5a63" />
+              <text class="lbl-ghost" x="305" y="315">you were here '23</text>
+              <circle cx="455" cy="316" r="4" fill="#7a7a85" />
+              <text class="lbl-ghost" x="430" y="305">you were here '24</text>
+            </g>
+
+            <!-- YOU ARE HERE -->
+            <circle cx="565" cy="303" r="7" fill="#f5c518" stroke="#0a0a0b" stroke-width="2" />
+            <line x1="565" y1="296" x2="565" y2="250" stroke="#f5c518" stroke-width="1.5" stroke-dasharray="3 3" />
+            <text class="lbl" x="528" y="242">YOU ARE HERE</text>
+
+            <!-- AGI flag on wheels, far up-right -->
+            <line x1="752" y1="78" x2="752" y2="120" stroke="#ff5d5d" stroke-width="3" />
+            <path d="M752,80 L800,90 L752,100 Z" fill="#ff5d5d" />
+            <text class="lbl" x="700" y="74" fill="#ff5d5d">AGI*</text>
+            <circle cx="746" cy="126" r="5" fill="#8e8e98" />
+            <circle cx="760" cy="126" r="5" fill="#8e8e98" />
+            <text class="lbl-ghost" x="690" y="142">*definition pending</text>
+          </svg>
+        </div>
+        <p class="caption-note"><strong>Vibe:</strong> dry, skeptical, on-brand for "No." &nbsp;·&nbsp; <strong>Tagline:</strong> "AGI is always five years away."</p>
+      </section>
+
+      <!-- CONCEPT B -->
+      <section class="concept">
+        <span class="tag">Concept B</span>
+        <h2>Hype vs. Reality</h2>
+        <p class="punch">Two lines: the timeline on your feed (rocketing to AGI) and what the benchmarks actually show (a polite crawl).</p>
+        <div class="frame">
+          <svg viewBox="0 0 820 380" role="img" aria-label="Hype vs reality">
+            <line class="axis" x1="55" y1="345" x2="790" y2="345" />
+            <line class="axis" x1="55" y1="345" x2="55" y2="35" />
+
+            <!-- hype line (dashed red) -->
+            <path d="M60,332 C 280,250 470,110 735,60" fill="none" stroke="#ff5d5d" stroke-width="3" stroke-dasharray="7 6" />
+            <text class="emoji" x="742" y="58">🤖</text>
+            <text class="lbl" x="600" y="44" fill="#ff5d5d">AGI, allegedly</text>
+
+            <!-- reality line (solid yellow) -->
+            <path d="M60,332 C 320,328 540,318 770,292" fill="none" stroke="#f5c518" stroke-width="3" />
+            <circle cx="565" cy="313" r="7" fill="#f5c518" stroke="#0a0a0b" stroke-width="2" />
+            <text class="lbl" x="528" y="300">YOU ARE HERE</text>
+
+            <!-- figures along the journey -->
+            <text class="emoji" x="44" y="372">🐒</text>
+            <text class="emoji" x="300" y="345">🧍</text>
+
+            <!-- legend -->
+            <line x1="70" y1="70" x2="100" y2="70" stroke="#ff5d5d" stroke-width="3" stroke-dasharray="7 6" />
+            <text class="lbl-sm" x="106" y="74">the timeline on your feed</text>
+            <line x1="70" y1="94" x2="100" y2="94" stroke="#f5c518" stroke-width="3" />
+            <text class="lbl-sm" x="106" y="98">what benchmarks measure</text>
+          </svg>
+        </div>
+        <p class="caption-note"><strong>Vibe:</strong> playful, sharable. &nbsp;·&nbsp; <strong>Tagline:</strong> "We're the yellow line. We've always been the yellow line."</p>
+      </section>
+
+      <!-- CONCEPT C -->
+      <section class="concept">
+        <span class="tag">Concept C</span>
+        <h2>Not to scale</h2>
+        <p class="punch">Same dot, two x-axes. It <em>feels</em> like AGI is right there — until you read the axis.</p>
+        <div class="frame">
+          <svg viewBox="0 0 820 380" role="img" aria-label="Not to scale">
+            <!-- left mini panel: feels like -->
+            <text class="lbl-sm" x="60" y="40">what it feels like</text>
+            <line class="axis" x1="60" y1="300" x2="350" y2="300" />
+            <path d="M60,290 C 150,260 220,150 330,90" fill="none" stroke="#f5c518" stroke-width="3" />
+            <circle cx="270" cy="135" r="6" fill="#f5c518" stroke="#0a0a0b" stroke-width="2" />
+            <text class="lbl-sm" x="200" y="125">you are here</text>
+            <text class="lbl" x="300" y="80" fill="#ff5d5d">AGI</text>
+
+            <!-- divider -->
+            <line x1="410" y1="40" x2="410" y2="320" stroke="rgba(255,255,255,0.10)" stroke-width="1" stroke-dasharray="4 5" />
+
+            <!-- right panel: actual axis -->
+            <text class="lbl-sm" x="470" y="40">the actual x-axis</text>
+            <line class="axis" x1="470" y1="300" x2="790" y2="300" />
+            <path d="M470,294 C 560,290 660,286 780,280" fill="none" stroke="#f5c518" stroke-width="3" />
+            <circle cx="520" cy="291" r="6" fill="#f5c518" stroke="#0a0a0b" stroke-width="2" />
+            <text class="lbl-sm" x="476" y="280">you are here</text>
+            <line x1="760" y1="120" x2="760" y2="135" stroke="#ff5d5d" stroke-width="2" />
+            <text class="lbl-sm" x="690" y="112" fill="#ff5d5d">AGI (somewhere)</text>
+            <path d="M700,170 C 740,150 770,140 788,150" fill="none" stroke="#5a5a63" stroke-width="1.5" stroke-dasharray="3 3" />
+            <text class="lbl-ghost" x="690" y="190">→ off the chart →</text>
+          </svg>
+        </div>
+        <p class="caption-note"><strong>Vibe:</strong> the smart-aleck data-viz joke. &nbsp;·&nbsp; <strong>Tagline:</strong> "Feels close. Check the axis labels."</p>
+      </section>
+    </div>
+  </body>
+</html>

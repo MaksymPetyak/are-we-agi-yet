@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import BootSequence from './components/BootSequence'
+import Layout from './components/Layout'
+import Home from './pages/Home'
+import Benchmarks from './pages/Benchmarks'
+import Definitions from './pages/Definitions'
+import Opinions from './pages/Opinions'
 
 function App() {
+  const [booted, setBooted] = useState(() => {
+    try {
+      return sessionStorage.getItem('awa_booted') === '1'
+    } catch {
+      return false
+    }
+  })
+
+  if (!booted) {
+    return (
+      <BootSequence
+        onDone={() => {
+          try {
+            sessionStorage.setItem('awa_booted', '1')
+          } catch {
+            /* sessionStorage unavailable — just proceed */
+          }
+          setBooted(true)
+        }}
+      />
+    )
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="benchmarks" element={<Benchmarks />} />
+        <Route path="definitions" element={<Definitions />} />
+        <Route path="opinions" element={<Opinions />} />
+        <Route path="*" element={<Home />} />
+      </Route>
+    </Routes>
+  )
 }
 
-export default App;
+export default App
